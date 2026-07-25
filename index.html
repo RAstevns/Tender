@@ -2,18 +2,50 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Tender</title>
 
         <!-- style sheets -->
-        <link rel="stylesheet" href="frontend.css">
+            <!-- bootstrap -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+            <!-- jQuery -->
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.2/themes/base/jquery-ui.css">
+        <link rel="stylesheet" href="css/frontend.css">
 
         
     </head>
     <body>
         <!-- page content -->
-        <p>Hello, world!</p>
+        <div id="header" class="container-xxl border">
+            <div id="logo">Tender</div>
+            <p id="welcome">Welcome to Tender</p>
+            <p id="instructions">Swipe nearby restaurants with your group 
+                and find a place everyone wants.</p>
+        </div>
+
+        <div id="instruction_list" class="container-xxl border">
+            <ol>
+                <li>Invite your group
+                    <p>Share one link so everyone joins the same session.</p>
+                </li>
+                <li>Swipe the options
+                    <p>Choose yes or no, one restaurant at a time.</p>
+                </li>
+                <li>Find your match
+                    <p>See which restaurants everyone in your group liked.</p>
+                </li>
+            </ol>
+        </div>
+
+        <!-- button that laeds to mainpage.html -->
+        <!-- <a href="mainpage.html">I'm hungry</a> -->
+        <button type="button" class="btn btn-link" id="button">I'm hungry</button>
 
         <!-- scripts -->
-        <script src="script.js"></script>
+            <!-- bootstrap -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+            <!-- jQuery -->
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        <script src="js/frontend/frontend.js"></script>
     </body>
 </html>

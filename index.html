@@ -12,6 +12,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 
     <!-- JQuery -->
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.2/themes/base/jquery-ui.css">
@@ -26,18 +28,21 @@
 </head>
 
 <body>
+    <!--the classes are very confusing: "my-md-5 =  margin on the y axis for a medium screen is 3"-->
     <div class="row my-md-5 my-3">
-
+        <!--col for small then medium then large size screen, set text to center and margins to auto-->
         <div id="header" class="container col-12 col-md-6 col-lg-4 text-center mx-auto">
             <img src="img/Tender-Logo.png" alt="Logo" id="logo" class="my-md-2">
             <h2 class="my-md-2 fw-bold">Tender</h2>
             <h1 id="welcome" class="my-md-2 fw-bold">Welcome to Tender</h1>
+            <!--align text to the left, make it grey and big (fs = font size)-->
             <p id="instructions" class="text-start text-secondary fs-3 my-md-5 mx-2">Swipe nearby restaurants with your group
                 and find a place everyone wants.</p>
         </div>
 
 
         <div id="instructionlist" class="container col-12 col-md-6 col-lg-4 mx-auto">
+            <!-- might change from numbered group to use the nice numbered icons from bootstrap-->
             <ul class="list-group list-group-numbered my-md-5">
                 <li class="list-group-item fs-3 ">Invite your group
                     <p class="text-start text-secondary">Share one link so everyone joins the same session.</p>
@@ -56,7 +61,10 @@
     </div>
 
     <!-- button that laeds to groupselection.html -->
-    <a type="button" class="container-md btn fw-bold border position-absolute translate-middle-x start-50 fs-2 text-white bg-danger"
+    <!--this is completley unreadable thank you bootstrap! 
+    anyway: medium sized container, bootstrap button setting, set it to bold, from "position-absolute" to "start-50" centers the button horizontally, 
+    then the rest just sets the font size and color -->
+    <a type="button" class="container-md btn fw-bold position-absolute translate-middle-x start-50 fs-2 text-white bg-danger"
         href='groupselection.html'>I'm hungry</a>
 </body>
 

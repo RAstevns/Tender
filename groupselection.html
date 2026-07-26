@@ -1,55 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Tender</title>
 
-        <!-- Bootstrap -->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tender</title>
+
+    <!-- Bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 
     <!-- JQuery -->
-    <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.2/themes/base/jquery-ui.css">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 
     <!-- Frontend -->
     <link rel="stylesheet" href="css/frontend.css">
     <script src="js/frontend/frontend.js"></script>
-        
-    </head>
-    <body>
-        
-        <div id="header">
-            <p>Your Group</p>
-            <p id="instructions">Share the link with your group, then start swiping.</p>
-        </div>
 
-        <div id="invite_link">
-            <p>Invite link</p>
-            <div id="link_container">
-                <p id="link"></p>
-                <div id="copy_button">
-                    [Insert Copy Icon]
-                    Copy
-                </div>
+</head>
+
+<body>
+    <div class="row border-bottom border-dark border-2">
+        <div id="header" href="index.html" class="container col-11 d-flex justify-content-start mx-auto">
+            <img src="img/Tender-Logo.png" alt="Logo" style="width: 50px;height: 50px;" id="logo" class="my-md-3 ms-3">
+            <h2 class="my-auto mx-3 fw-bold text-start ">Tender</h2>
+
+        </div>
+        <a href="index.html" class="bi bi-info-circle fs-1 my-auto col-1"></a>
+    </div>
+    <div class="row my-md-5 my-1">
+        <div class="container col-12 col-md-6 col-lg-4 mx-auto">
+            <p class="fs-2 fw-bold">Your group</p>
+            <p class="fs-4 text-secondary mb-5">Share the link with your group, then start swiping.</p>
+
+            <p class="fw-bold mt-md-5">Invite link</p>
+            <div id="link_container" class="d-flex justify-content-start bg-secondary-subtle rounded-3 ">
+                <!--Temp link from prototype-->
+                <p id="link" class="my-auto m-4 fs-5">tender.com/g/asdfasdf747</p>
+                
+                <!-- inline copy function, can be moved later if necessary -->
+                <button id="copy"
+                    onclick="navigator.clipboard.writeText($('#link').html()); $('#copy').html(' Copied!');"
+                    class="btn bi bi-copy m-1 bg-white border text-danger"> Copy</button>
+                
             </div>
+            <p class="text-body-tertiary mt-1 mb-md-5">Anyone with this link can join your group.</p>
+
+            <a id="button" class="container-md btn fw-bold fs-5 my-5 text-center text-white bg-danger rounded-3"
+        href='groupselection.html'>Start swiping</a>
         </div>
 
-        <div id="group_members">
+        <div class="container col-12 col-md-6 col-lg-4 mx-auto my-md-5 my-3">
+            <p class="fs-4 list-group my-4">Group Members: </p>
             <ul>
-                <li>Group Member 1</li>
-                <li>Group Member 2</li>
-                <li>Group Member n</li>
+                <li class="list-group-item fs-3 my-2 border-bottom">
+                    <i class="bi bi-circle-fill text-success"></i> Group Member 1</li>
+
+                <li class="list-group-item fs-3 my-2 border-bottom">
+                    <i class="bi bi-circle-fill text-danger"></i> Group Member 2</li>
+
+                <li class="list-group-item fs-3 my-2 border-bottom">
+                    <i class="bi bi-circle-fill text-success"></i> Group Member n</li>
+
             </ul>
         </div>
 
-        <div id="button">Start swiping</div>
 
-        <!-- <script src="js/frontend/..."></script> -->
-    </body>
+    </div>
+</body>
+
 </html>

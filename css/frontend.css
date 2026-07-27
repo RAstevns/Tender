@@ -1,0 +1,43 @@
+/* makes the swipe animations smoother*/
+#restaurant-card {
+    transition: transform 0.7s ease, opacity 0.7s ease;
+}
+/*style for the like/dislike*/
+.swipe-badge {
+    position: absolute;
+    top: 20px;
+    padding: 8px 16px;
+    font-size: 28px;
+    font-weight: bold;
+    border: 3px solid;
+    border-radius: 10px;
+    opacity: 0;
+    z-index: 10;
+    background-color: white;
+}
+.like-badge {
+    right: 20px;
+    color: green;
+    border-color: green;
+    transform: rotate(15deg); /*positions the LIKE badge on the right*/
+}
+.dislike-badge {
+    left: 20px;
+    color: red;
+    border-color: red;
+    transform: rotate(-15deg); /*positions the NOPE badge on the left*/
+}
+#restaurant-card.show-like #like-badge {
+    opacity: 1; /*shows the LIKE badge*/
+}
+#restaurant-card.show-dislike #dislike-badge {
+    opacity: 1; /*shows the NOPE badge*/
+}
+#restaurant-card.swipe-right {
+    transform: translateX(140px) rotate(10deg); /*moves the card out to the right */
+    opacity: 0; 
+}
+#restaurant-card.swipe-left {
+    transform: translateX(-140px) rotate(-10deg); /* moves the card out to the left */
+    opacity: 0;
+}

@@ -11,7 +11,7 @@ let RestaurantInfo = [
     },
     {
         Name: "McDonald's",
-        image: "data/panera.jpeg",
+        image: "data/mcdonalds.jpeg",
         Cuisine: "American, Fast Food",
         Hours: "7AM - 9PM",
         Address: "123 Main Street",
@@ -19,7 +19,7 @@ let RestaurantInfo = [
     },
     {
         Name: "Applebee's",
-        image: "data/panera.jpeg",
+        image: "data/applebee-s-neighborhood.jpeg",
         Cuisine: "American, Casual dining",
         Hours: "10:30 AM - 10:00 PM",
         Address: "250 Oak Ave",

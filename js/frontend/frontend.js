@@ -14,20 +14,25 @@ $(function() {
 
         const restaurant = RestaurantInfo[currentIndex];
 
-        let $card_container = $('<div id="card-container" class="container my-3"><div class="card" id="restaurant-card"><div class="card-header">'+
-            '<h4 class="card-title">'+
+        let $card_container = $('<div id="card-container" class="container row"><div class="card col-10 col-md-6 col-lg-8 m-auto " id="restaurant-card">'+
+            '<p class="card-title fs-2 fw-bold m-3 position-absolute">'+
             restaurant["Name"]+
-            '</h4></div><div class="card-body position-relative">'+
+            '</p><p class="card-text fs-5 text-secondary float-end text-end m-4 ">'+
+            //  filler because it is not implemented in data structure yet
+            (currentIndex+1)+' of '+RestaurantInfo.length+
+            '</p><div class="card-body position-relative">'+
             '<div id="like-badge" class="swipe-badge like-badge">LIKE</div>'+
             '<div id="dislike-badge" class="swipe-badge dislike-badge">NOPE</div>'+ //added badges so the user can see a visual like/dislike 
-            '<img class="card-img" draggable="false" '+
-            'src="'+restaurant["image"]+'" alt="Card image"><p class="card-text">'+
+            //'<img class="card-img-top img-fluid mx-auto border-bottom border-1 pb-4" '
+            '<img class="card-img-top img-fluid mx-auto border-bottom border-1 pb-4" draggable="false" '+
+            'src="'+restaurant["image"]+
+            '" alt="Card image"><p class="card-text fw-bold fs-3 mt-2">'+
             restaurant["Cuisine"]+
             '</p><p class="card-text">'+
             restaurant["Hours"]+
-            '</p><p class="card-text">'+
+            '</p><p class="card-text text-success fw-bold float-start">'+
             restaurant["Address"]+
-            '</p><p class="card-text">'+
+            '</p><p class="card-text text-danger fw-bold float-end text-end">'+
             restaurant["Distance"]+
             '</p></div> </div>'+
             '<div class="d-flex justify-content-center gap-3 mt-3">'+
@@ -129,3 +134,33 @@ $(function() {
 
     generateCard();
 });
+/*
+$(function() {
+
+    function generateCard() {
+
+        let current = 1;
+        let total = 4;
+
+        let $card_container = $('<div class="card ">'+
+            '<p class="card-title fs-2 fw-bold m-3 position-absolute">'+
+            RestaurantInfo["Name"]+
+            '</p><p class="card-text fs-5 text-secondary float-end text-end m-4 ">'+
+            //  filler because it is not implemented in data structure yet
+            current+' of '+total+
+            '</p><div class="card-body"><img class="card-img-top img-fluid mx-auto border-bottom border-1 pb-4" '+
+            'src='+RestaurantInfo["image"]+
+            ' alt="Card image"><p class="card-text fw-bold fs-3 mt-2">'+
+            RestaurantInfo["Cuisine"]+
+            '</p><p class="card-text">'+
+            RestaurantInfo["Hours"]+
+            '</p><p class="card-text text-success fw-bold float-start">'+
+            RestaurantInfo["Address"]+
+            '</p><p class="card-text text-danger fw-bold float-end text-end">'+
+            RestaurantInfo["Distance"]+
+            '</p></div></div>');
+
+        $("#cardfront").append($card_container);
+    }
+    generateCard();
+});*/

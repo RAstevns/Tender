@@ -41,13 +41,12 @@ out geom;`;
   $.ajax({
 //  dataType: 'text/html',
 //  contentType: 'application/json',
-    type: 'GET',
-    crossDomain: true,
+    type: 'POST',
     url: "https://overpass-api.de/api/interpreter",
     data: { data: query },
-    headers: {
+    /*headers: {
       'Access-Control-Allow-Origin' : 'https://overpass-api.de/'
-    },
+    },*/
     success: function (result) {
       console.log(JSON.stringify(result, null, 2));
     },

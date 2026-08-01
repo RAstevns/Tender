@@ -34,7 +34,7 @@ function error() {
 */
 //42.6558344, -71.320074
 async function searchNearby(latitude, longitude) {
-  let query = `node(around:100.0,${latitude},${longitude});
+  let query = `[out:json];node(around:100.0,${latitude},${longitude});
 out body;`;
 
   $.ajax({

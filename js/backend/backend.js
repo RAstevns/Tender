@@ -35,8 +35,8 @@ function error() {
 //42.6558344, -71.320074
 //[out:json];node(around:100.0,42.6558344,-71.320074);out body;
 async function searchNearby(latitude, longitude) {
-  let query = `[out:json];node['amenity'='restaurant'](around:1000.0,${latitude},${longitude});
-out body;`;
+  let query = `[out:json];node['amenity'='restaurant'](around:5000.0,${latitude},${longitude});
+out geom;`;
 
   $.ajax({
 //  dataType: 'text/html',
@@ -49,7 +49,7 @@ out body;`;
       'Access-Control-Allow-Origin' : 'https://overpass-api.de/'
     },
     success: function (result) {
-      console.log(JSON.parse(result));
+      console.log(JSON.stringify(result, null, 2));
     },
   });
 

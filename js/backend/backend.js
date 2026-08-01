@@ -33,6 +33,7 @@ function error() {
 <print/></osm-script>`
 */
 //42.6558344, -71.320074
+//[out:json];node(around:100.0,42.6558344,-71.320074);out body;
 async function searchNearby(latitude, longitude) {
   let query = `[out:json];node(around:100.0,${latitude},${longitude});
 out body;`;
@@ -48,7 +49,7 @@ out body;`;
       'Access-Control-Allow-Origin' : 'https://overpass-api.de/'
     },
     success: function (result) {
-      console.log(result);
+      console.log(JSON.parse(result));
     },
   });
 

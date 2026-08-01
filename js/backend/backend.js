@@ -41,7 +41,7 @@ out geom;`;
   $.ajax({
 //  dataType: 'text/html',
 //  contentType: 'application/json',
-    type: 'POST',
+    type: 'GET',
     url: "https://overpass-api.de/api/interpreter",
     data: { data: query },
     /*headers: {
